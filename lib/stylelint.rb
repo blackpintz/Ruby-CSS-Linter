@@ -39,6 +39,28 @@ class Stylelint < CssFiles
         end
         end
     end
+    
+    def declaration_limit_10
+        if @declarations.length > 10
+            puts "You cannot have more than 10 declarations in one selector".colorize(:red)
+        else
+            puts "Test passed for 10 declarations or less".colorize(:green)
+        end
+    end
+    
+    def id_limit_10
+    no_of_ids = 0    
+     @page.each_selector do |one|
+     if one[0] == "#"
+        no_of_ids += 1
+     end
+    end
+    if no_of_ids > 4
+        puts "You cannot use more that four ids in the css file.".colorize(:red)
+    else
+        puts "Test passed for four ids or less"
+    end
+    end
 end
 
 
