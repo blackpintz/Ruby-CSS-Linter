@@ -61,7 +61,15 @@ class Stylelint < CssFiles
         puts "Test passed for four ids or less"
     end
     end
+    
+    def selector_names_lowercase
+     @page.each_selector do |one|
+     if(/[[:upper:]]/.match("#{one[0]}") || /[[:upper:]]/.match("#{one[1]}"))
+         puts "Do not use a capitalized class identifier, #{one}".colorize(:red)
+     else
+         puts "Test passed for selector names".colorize(:green)
+     end
+     end
+    end
 end
-
-
 
