@@ -1,20 +1,5 @@
-require "css_parser"
-require 'colorize'
+require_relative "file.rb"
 require_relative "modules.rb"
-
-class CssFiles
-    include CssParser
-    attr_reader :page
-    def initialize
-        @page = CssParser::Parser.new
-    end
-    
-    def access_file(path)
-        file_name = File.dirname(__FILE__) + path
-        @page.load_file!(file_name)
-        @page
-    end
-end
 
 class Stylelint < CssFiles
     include Stylelint_methods
@@ -31,20 +16,26 @@ class Stylelint < CssFiles
     end
     
     def px_measurement_not_allowed
-        @declarations.each do |key, value|
+        @page.each_selector do |one|
+        decs = declarations(one)
+        decs.each do |key, value|
         if(/px/.match("#{value}"))
           puts "#{value} is not allowed. Please use rems,ems or percentage units.".colorize(:red)
         else
           puts "Test passed".colorize(:green)
         end
         end
+        end
     end
     
     def declaration_limit_10
-        if @declarations.length > 10
+        @page.each_selector do |one|
+        decs = declarations(one)
+        if decs.length > 10
             puts "You cannot have more than 10 declarations in one selector".colorize(:red)
         else
             puts "Test passed for 10 declarations or less".colorize(:green)
+        end  
         end
     end
     
@@ -81,4 +72,17 @@ class Stylelint < CssFiles
      end
     end
     end
+    
+    def validate
+        px_measurement_not_allowed
+        declaration_limit_10
+        id_limit_10
+        selector_names_lowercase
+        selector_names_disallowed
+    end
+    
 end
+
+
+
+
