@@ -71,5 +71,14 @@ class Stylelint < CssFiles
      end
      end
     end
+    
+    def selector_names_disallowed
+    @page.each_selector do |one|
+     if(one == ".body" || one == ".a" || one == ".html" || one == ".div")
+         puts "You are not supposed to use #{one} as a class/id identifier.".colorize(:red)
+     else
+         puts "Test passed for selector names chosen".colorize(:green)
+     end
+    end
+    end
 end
-
