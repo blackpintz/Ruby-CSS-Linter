@@ -1,7 +1,9 @@
 require "css_parser"
-include CssParser
+require 'colorize'
+require_relative "modules.rb"
 
-class Stylelint
+class CssFiles
+    include CssParser
     attr_reader :page
     def initialize
         @page = CssParser::Parser.new
@@ -14,6 +16,21 @@ class Stylelint
     end
 end
 
-cssfile = Stylelint.new
+class Stylelint < CssFiles
+    include Stylelint_methods
+    attr_accessor :declarations
+    def initialize
+        super
+        @declarations = ""
+    end
+    
+    def declarations(selector)
+        elements = @page.find_by_selector(selector) 
+        @declarations = hash_decl(elements)
+        @declarations
+    end
+    
+end
 
-puts cssfile.access_file('./tester_file/styles.css')
+
+
