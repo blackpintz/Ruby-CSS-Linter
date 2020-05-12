@@ -30,6 +30,15 @@ class Stylelint < CssFiles
         @declarations
     end
     
+    def px_measurement_not_allowed
+        @declarations.each do |key, value|
+        if(/px/.match("#{value}"))
+          puts "#{value} is not allowed. Please use rems,ems or percentage units.".colorize(:red)
+        else
+          puts "Test passed".colorize(:green)
+        end
+        end
+    end
 end
 
 

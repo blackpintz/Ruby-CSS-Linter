@@ -1,0 +1,38 @@
+body {
+    color: red;
+    background: green;
+    width: 30px;
+    height: 20px;
+}
+
+.a {
+    color: yellow;
+    width: 30px;
+}
+
+.Mark {
+    border: 2px solid black;
+}
+
+#Will {
+    display: flex;
+}
+
+#Rose {
+    display: block;
+    color: purple;
+}
+
+#alice {
+    color: yellow;
+    height: 10rem;
+    font-size: 10%;
+}
+
+#fill {
+  color: yellow;   
+}
+
+#caps {
+     color: yellow;
+}
