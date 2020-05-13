@@ -89,10 +89,5 @@ end
 
 
 
-test_file = Stylelint.new
-test_file.access_file('../../tester_file/spec_test.css')
-
- puts test_file.selector_names_disallowed
-
 
 
