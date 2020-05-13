@@ -12,6 +12,12 @@ body {
     border: 10px;
 }
 
+div {
+   color:blue; 
+   background:red; 
+   width:10rem;
+}
+
 .a {
     color: yellow;
     width: 30px;

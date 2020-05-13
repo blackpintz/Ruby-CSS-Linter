@@ -1,0 +1,15 @@
+div {
+    width: 10px;
+}
+
+#mine {
+    display: flex;
+}
+
+.Help {
+    color: red;
+}
+
+.html {
+    margin : 1rem;
+}
