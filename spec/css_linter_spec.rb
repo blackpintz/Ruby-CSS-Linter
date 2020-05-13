@@ -7,7 +7,7 @@ describe Stylelint do
   describe '#declarations' do
     it 'returns a hash of all declarations in a given selector' do
       myfile.access_file('../../tester_file/styles.css')
-      expect(myfile.declarations('div')).to eql({ color: 'blue', background: 'red', width: '10rem' })
+      expect(myfile.decl_method('div')).to eql({ color: 'blue', background: 'red', width: '10rem' })
     end
   end
 

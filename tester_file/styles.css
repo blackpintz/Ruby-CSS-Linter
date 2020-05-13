@@ -6,10 +6,6 @@ body {
     display:flex;
     padding: 10rem;
     margin: 5rem;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color: yellow;
-    border: 10px;
 }
 
 div {

@@ -83,12 +83,3 @@ class Stylelint < CssFiles
     puts selector_names_disallowed
   end
 end
-
-
-test_file = Stylelint.new
-test_file.access_file('../../tester_file/spec_test.css')
-test_file.validate
-
-
-
-
