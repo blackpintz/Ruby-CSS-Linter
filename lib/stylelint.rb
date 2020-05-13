@@ -2,14 +2,14 @@ require_relative 'file.rb'
 require_relative 'modules.rb'
 
 class Stylelint < CssFiles
-  include Stylelint_methods
+  include StylelintMethods
   attr_accessor :declarations
   def initialize
     super
     @declarations = ''
   end
 
-  def declarations(selector)
+  def decl_method(selector)
     elements = @page.find_by_selector(selector)
     @declarations = hash_decl(elements)
     @declarations
@@ -19,7 +19,7 @@ class Stylelint < CssFiles
     msg = ''
     msg_arr = []
     @page.each_selector do |one|
-      decs = declarations(one)
+      decs = decl_method(one)
       decs.each do |_key, value|
         if /px/.match(value.to_s)
           msg = "#{value} is not allowed. Please use rems,ems or percentage units.".colorize(:red)
@@ -34,7 +34,7 @@ class Stylelint < CssFiles
     msg = ''
     msg_arr = []
     @page.each_selector do |one|
-      decs = declarations(one)
+      decs = decl_method(one)
       if decs.length > 10
         msg = 'You cannot have more than 10 declarations in one selector'.colorize(:red)
         msg_arr << msg
@@ -76,10 +76,19 @@ class Stylelint < CssFiles
   end
 
   def validate
-    px_measurement_not_allowed
-    declaration_limit_10
-    id_limit_10
-    selector_names_lowercase
-    selector_names_disallowed
+    puts px_measurement_not_allowed
+    puts declaration_limit_10
+    puts id_limit_4
+    puts selector_names_lowercase
+    puts selector_names_disallowed
   end
 end
+
+
+test_file = Stylelint.new
+test_file.access_file('../../tester_file/spec_test.css')
+test_file.validate
+
+
+
+

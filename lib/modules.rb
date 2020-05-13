@@ -1,6 +1,6 @@
-module Stylelint_methods
-  def hash_decl(el)
-    decl = el[0]
+module StylelintMethods
+  def hash_decl(ele)
+    decl = ele[0]
     new_hash = {}
     arr = decl.split(';')
     arr.each do |obj|
