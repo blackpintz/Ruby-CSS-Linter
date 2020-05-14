@@ -1,5 +1,5 @@
-require_relative 'file.rb'
-require_relative 'modules.rb'
+require_relative 'file_path.rb'
+require_relative 'controller.rb'
 
 class Stylelint < CssFiles
   include StylelintMethods
