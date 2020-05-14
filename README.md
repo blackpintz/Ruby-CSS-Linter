@@ -1,3 +1,6 @@
+[![Email me](https://img.shields.io/badge/Hire%20%2F%20Consult-Click%20to%20contact-blue)](mailto:rosewanjohi24@gmail.com)
+[![Twitter Follow](https://img.shields.io/twitter/follow/blackpintz?label=Tweet%20me&style=social)](https://twitter.com/blackpintz)
+
 ## Ruby-CSS-Linter
 
 The projects checks linter errors in CSS files.
@@ -21,9 +24,13 @@ When the file fails to lint checkers, it throw a red colored error giving the wa
 ## Getting Started
 
 Clone the git repository.
+
 cd into the project.
+
 Some css files have been created, in the tester_file folder, for testing purposes. If you prefer to use your
+
 own css file, create a css file in the tester_file folder and change the path in the bin/main.rb file.
+
 Run bin/main.rb to find the lint errors in the css file you choose.
 
 ## Project Issues 
