@@ -14,7 +14,7 @@ describe Stylelint do
   describe '#px_measurement_not_allowed' do
     it 'throws a warning when it detects use of px measurements' do
       myfile.access_file('../../tester_file/spec_test.css')
-      expect(myfile.px_measurement_not_allowed).to eql(['10px is not allowed. Please use rems,ems or percentage units.'.colorize(:red)])
+      expect(myfile.px_measurement_not_allowed).to eql(['10px is not allowed in div. Please use rems,ems or percentage units.'.colorize(:red)])
     end
   end
 

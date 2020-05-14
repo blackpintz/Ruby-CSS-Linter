@@ -22,7 +22,7 @@ class Stylelint < CssFiles
       decs = decl_method(one)
       decs.each do |_key, value|
         if /px/.match(value.to_s)
-          msg = "#{value} is not allowed. Please use rems,ems or percentage units.".colorize(:red)
+          msg = "#{value} is not allowed in #{one}. Please use rems,ems or percentage units.".colorize(:red)
           msg_arr << msg
         end
       end
@@ -36,7 +36,7 @@ class Stylelint < CssFiles
     @page.each_selector do |one|
       decs = decl_method(one)
       if decs.length > 10
-        msg = 'You cannot have more than 10 declarations in one selector'.colorize(:red)
+        msg = "You cannot have more than 10 declarations in #{one}".colorize(:red)
         msg_arr << msg
       end
     end

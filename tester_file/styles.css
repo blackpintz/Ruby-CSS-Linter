@@ -3,9 +3,13 @@ body {
     background: green;
     width: 30px;
     height: 20px;
-    display:flex;
     padding: 10rem;
     margin: 5rem;
+    display: flex;
+    border-bottom: 2rem;
+    border-color: grey;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 div {
