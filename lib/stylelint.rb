@@ -10,7 +10,7 @@ class Stylelint < FilePath
   end
 
   private
-  
+
   def decl_method(selector)
     elements = @page.find_by_selector(selector)
     @declarations = hash_decl(elements)
@@ -76,9 +76,9 @@ class Stylelint < FilePath
     end
     !msg_arr.empty? ? msg_arr.each { |alert| alert } : 'Test passed for selector names chosen'.colorize(:green)
   end
-  
+
   public
-  
+
   def validate
     puts px_measurement_not_allowed
     puts declaration_limit_10

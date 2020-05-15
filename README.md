@@ -23,6 +23,8 @@ When the file fails to lint checkers, it throw a red colored error giving the wa
 
 -css_parser
 
+-colorize
+
 ## Getting Started
 
 Clone the git repository.
