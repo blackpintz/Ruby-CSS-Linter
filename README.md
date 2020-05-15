@@ -20,6 +20,7 @@ When the file fails to lint checkers, it throw a red colored error giving the wa
 ## Built with
 
 -Ruby
+
 -css_parser
 
 ## Getting Started
