@@ -72,6 +72,13 @@ you find one that works.
 [Live Link](https://repl.it/@blackpintz/RubyCssLinters)
 
 
+## Automated tests
+
+I used RSpec testing tool to test my linter methods
+
+![rspec](https://user-images.githubusercontent.com/38922385/82025356-e2f39b80-9699-11ea-9c2a-39bd8f22950c.png)
+
+
 ## Author
 
 Rose Wanjohi
