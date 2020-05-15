@@ -103,6 +103,7 @@ Contributions, issues and feature requests are welcome! Start by:
 ## Acknowledgement
 
 [microverse](https://www.microverse.org/)
+
 [css_parser](https://github.com/premailer/css_parser/tree/master/)
 
 ## Show your support

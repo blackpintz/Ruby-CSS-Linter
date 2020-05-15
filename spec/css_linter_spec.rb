@@ -1,6 +1,6 @@
 require_relative '../lib/stylelint.rb'
 require_relative '../lib/file_path.rb'
-require_relative '../lib/controller.rb'
+require_relative '../lib/stylelintmethods.rb'
 
 describe Stylelint do
   let(:myfile) { Stylelint.new }

@@ -1,7 +1,7 @@
 require 'css_parser'
 require 'colorize'
 
-class CssFiles
+class FilePath
   include CssParser
   attr_reader :page
   def initialize

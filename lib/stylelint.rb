@@ -1,7 +1,7 @@
 require_relative 'file_path.rb'
-require_relative 'controller.rb'
+require_relative 'stylelintmethods.rb'
 
-class Stylelint < CssFiles
+class Stylelint < FilePath
   include StylelintMethods
   attr_accessor :declarations
   def initialize
