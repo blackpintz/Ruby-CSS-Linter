@@ -20,12 +20,15 @@ When the file fails to lint checkers, it throw a red colored error giving the wa
 ## Built with
 
 -Ruby
+-css_parser
 
 ## Getting Started
 
 Clone the git repository.
 
 cd into the project.
+
+Run ```bundle install``` to load the gemfiles
 
 Some css files have been created, in the tester_file folder, for testing purposes. If you prefer to use your
 
