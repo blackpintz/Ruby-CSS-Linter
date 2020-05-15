@@ -33,14 +33,37 @@ own css file, create a css file in the tester_file folder and change the path in
 
 Run bin/main.rb to find the lint errors in the css file you choose.
 
+### Good and bad code
+
+## Bad code
+
+```div{ width: 10px}``` using px as a measurement unit.
+
+```.html {}``` using html tag as a class selector.
+
+```.Help {} ``` using a capitalized class selector.
+
+![bad_code](https://user-images.githubusercontent.com/38922385/82023444-f5200a80-9696-11ea-8b78-fa8ea89d8c38.png)
+
+## Good code
+
+```div{ width: 10rem}``` using rem as a measurement unit.
+
+```.webpage {}``` using a class selector that is not html.
+
+```.help {} ``` using a lower class selector.
+
+![good code](https://user-images.githubusercontent.com/38922385/82023908-a6bf3b80-9697-11ea-923b-c06fedcd915d.png)
+
 ## Project Issues 
 
 The css_parser gemfile may or may not load. In that case, try different css_parser versions until
 you find one that works.
 
-##Live Demo
 
-[Live Demo Link](https://repl.it/@blackpintz/RubyCssLinters)
+## Live link
+
+[Live Link](https://repl.it/@blackpintz/RubyCssLinters)
 
 
 ## Author
