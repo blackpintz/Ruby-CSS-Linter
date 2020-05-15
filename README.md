@@ -31,7 +31,13 @@ Some css files have been created, in the tester_file folder, for testing purpose
 
 own css file, create a css file in the tester_file folder and change the path in the bin/main.rb file.
 
-Run bin/main.rb to find the lint errors in the css file you choose.
+## Linter commands
+
+Run ```puts test_file.access_file('../../tester_file/styles.css')``` to confirm if your css file is accessible. 
+If so it should print the content of css on the terminal.
+
+Run ```bin/main.rb``` to find the lint errors in the css file you choose.
+
 
 ### Good and bad code
 
