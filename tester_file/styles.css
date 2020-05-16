@@ -1,0 +1,51 @@
+body {
+    color: red;
+    background: green;
+    width: 30px;
+    height: 20px;
+    padding: 10rem;
+    margin: 5rem;
+    display: flex;
+    border-bottom: 2rem;
+    border-color: grey;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div {
+   color:blue; 
+   background:red; 
+   width:10rem;
+}
+
+.a {
+    color: yellow;
+    width: 30px;
+}
+
+.html {
+    border: 2px solid black;
+}
+
+#Will {
+    display: flex;
+}
+
+#Rose {
+    display: block;
+    color: purple;
+}
+
+#alice {
+    color: yellow;
+    height: 10rem;
+    font-size: 10%;
+}
+
+#fill {
+  color: yellow;   
+}
+
+#caps {
+     color: yellow;
+}
